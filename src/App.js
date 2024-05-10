@@ -1,25 +1,79 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from './components/Footer'
+import Products from './components/Products'
+import Main from './components/Main'
 
-function App() {
+const App = () => {
+
+  const uname = 'Alice'
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Main uname={uname} />
+      <Products />
+      <Footer />
+    </>
+  )
 }
 
-export default App;
+export default App
+
+
+// Step 1 - function definition
+// function App() {
+
+//   return (
+//     <div>
+//       <h3>Hello Customer - JSX</h3>
+//       <h4>Nice to have you back...</h4>
+//       <p>we have new products for you</p>
+//       <button>Read More...</button>
+//     </div>
+//   )
+// }
+
+// Step 2 - fat arrow
+// const App = () => {
+
+//   return (
+//     <div>
+//       <h3>Hello Customer - JSX</h3>
+//       <h4>Nice to have you back...</h4>
+//       <p>we have new products for you</p>
+//       <button>Read More...</button>
+//     </div>
+//   )
+// }
+
+// Step 3 - using fragments
+// const App = () => {
+
+//   return (
+//     <>
+//       <h3>Hello Customer - JSX</h3>
+//       <h4>Nice to have you back...</h4>
+//       <p>we have new products for you</p>
+//       <button>Read More...</button>
+//     </>
+//   )
+// }
+
+// Step 4 - using a new component
+// const Main = () => {
+//   return (
+//     <>
+//       <h3>Hello Customer - JSX</h3>
+//       <h4>Nice to have you back...</h4>
+//       <p>we have new products for you</p>
+//       <button>Read More...</button>
+//     </>
+//   )
+// }
+
+// Step 5 - move to an external file
+// const App = () => {
+
+//   return (
+//   //  <Main></Main>
+//   <Main />
+//   )
+// }
